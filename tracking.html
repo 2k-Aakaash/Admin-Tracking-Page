@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payroll</title>
+    <title>Tracking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -148,132 +148,26 @@
                 </div>
             </div>
             <div class="right-side">
-                <div class="name-container">
-                    <h1>Payroll</h1>
-                </div>
-                <div class="filter-date-container">
-                    <div class="from-container">
-                        <p for="month" class="month-text">Month</p><br>
-                        <select id="month">
-                            <option value="disabled">Select</option>
-                            <option value="January">January</option>
-                            <option value="February">February</option>
-                            <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">August</option>
-                            <option value="September">September</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
-                        </select>
+                <iframe class="iframe-class" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125766.13086926418!2d78.04042021781319!3d9.917995904535406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0xdc955b7264f63933!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1710928811443!5m2!1sen!2sin" width="800" height="550" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="user-details">
+                    <div class="top-container">
+                        <h3>Maverick</h3>
+                        <p>Selected Date</p>
+                        <p>Speed</p>
+                        <p>Time</p>
                     </div>
-                    <div class="to-container">
-                        <p for="name" class="month-text">Employee</p><br>
-                        <select id="name">
-                            <option value="disabled">Select</option>
-                            <option value="January">Name 1</option>
-                            <option value="February">Name 2</option>
-                            <option value="March">Name 3</option>
-                            <option value="April">Name 4</option>
-                            <option value="May">Name 5</option>
-                            <option value="June">Name 6</option>
-                            <option value="July">Name 7</option>
-                            <option value="August">Name 8</option>
-                            <option value="September">Name 9</option>
-                            <option value="October">Name 10</option>
-                            <option value="November">Name 11</option>
-                            <option value="December">Name 12</option>
-                        </select>
+                    <div class="bottom-container">
+                        <div class="location-container">
+                            <p>Location</p>
+                            <p class="location-data">86,86, Ponmeni, Madurai, Tamil Nadu, India</p>
+                        </div>
+                            <input type="date" class="date-input">
+                            <p>3 Weeks Ago</p>
+                            <p>9:41 PM</p>
                     </div>
-                    <div class="buttons-container">
-                        <button>Search</button>
+                    <div class="slider-container">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                     </div>
-                </div>
-                <div class="salary-details">
-                    <p>Employee Name: Maverick</p>
-                    <p>Monthly Salary: ₹50,000</p>
-                    <p>Leave: 4 Days</p>
-                    <p>Total Working Hours: 313 Hours, 46 Minutes</p>
-                    <p>Per Hour Salary: ₹1,850</p>
-                    <p>Per Minute Salary: ₹1.1</p>
-                    <p>Salary: ₹6,00,000</p>
-                </div>
-                <div class="payroll-table-container">
-                    <table>
-                        <tr>
-                            <th>Date</th>
-                            <th>Name</th>
-                            <th>Working Status</th>
-                            <th>Working Hours</th>
-                            <th>Day Salary</th>
-                        </tr>
-                        <tr>
-                            <td>13/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1800</td>
-                        </tr>
-                        <tr>
-                            <td>14/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1400</td>
-                        </tr>
-                        <tr>
-                            <td>15/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1500</td>
-                        </tr>
-                        <tr>
-                            <td>16/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1100</td>
-                        </tr>
-                        <tr>
-                            <td>17/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1200</td>
-                        </tr>
-                        <tr>
-                            <td>18/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1900</td>
-                        </tr>
-                        <tr>
-                            <td>19/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1700</td>
-                        </tr>
-                        <tr>
-                            <td>20/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1800</td>
-                        </tr>
-                        <tr>
-                            <td>21/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1600</td>
-                        </tr>
-                    </table>
                 </div>
             </div>
         </div>

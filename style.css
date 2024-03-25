@@ -1,0 +1,140 @@
+*{
+    font-family: Inter;
+}
+
+body{
+    background: url(assets/BG2.png) no-repeat center center fixed;
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.container{
+    /* height: 500px; */
+    border: 1px solid white;
+    border-radius: 15px;
+    /* padding: 40px 40px; */
+    width: 40%;
+}
+
+.body-text-container{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.input-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 40px 0;
+    gap: 40px;
+    place-items: center;
+}
+
+.username, .password{
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 20px;
+    outline: none;
+    border-radius: 15px;
+    width: 60%;
+}
+
+::placeholder{
+    color: #ffffffaa;
+}
+
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.checkbox-container p{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+input[type='checkbox']{
+    width: 15px;
+}
+
+.privacy-text{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.privacy-text p{
+    margin: 0;
+}
+
+.login-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.enter-button{
+    width: 30%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s background-color ease-in-out;
+    cursor: pointer;
+}
+
+.enter-button:hover{
+    background-color: white;
+    color: #000;
+}
+
+u{
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    .privacy-text, .checkbox-container{
+        min-width: 60%;
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+    }
+    
+    .enter-button{
+        min-width: 60%;
+    }
+
+    .container{
+        padding: 20%;
+    }
+
+    .input-container{
+        min-width: 70%;
+    }
+
+    .username, .password{
+        width: 100%;
+    }
+
+    .body-text-container{
+        color: #fff;
+    }
+}

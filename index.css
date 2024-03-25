@@ -172,7 +172,7 @@ body{
     left: 0;
     width: 100%;
     /* background-color: rgb(255 168 221); */
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(15px);
     padding: 10px 5px 15px 5px;
     box-sizing: border-box;
     z-index: 1;
@@ -415,4 +415,44 @@ option{
 .month-text{
     margin-top: 30px;
     margin-bottom: 0;
+}
+
+.salary-details{
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 10px;
+    place-items: center;
+}
+
+.salary-details p{
+    margin: 5px 0;
+}
+
+.payroll-table-container{
+    height: calc(100vh - 435px);
+    overflow: auto;
+    color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.payroll-table-container::-webkit-scrollbar {
+    display: none;
+}
+
+.payroll-table-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.5) rgba(255, 255, 255, 0.1); 
+}
+
+.payroll-table-container::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 30px;
+}
+
+.payroll-table-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(83, 83, 83, 0.8); 
 }
