@@ -456,3 +456,112 @@ option{
 .payroll-table-container::-webkit-scrollbar-thumb:hover {
     background-color: rgba(83, 83, 83, 0.8); 
 }
+
+.mobile-menu-icon {
+    display: none;
+    position: fixed;
+    top: 25px;
+    left: 40px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.left-side.collapsed {
+    transform: translateX(-105%);
+}
+
+.top-side{
+    display: none;
+    backdrop-filter: blur(150px);
+    border-radius: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+}
+
+.top-container h1{
+    text-align: center;
+    display: block;
+}
+
+.top-container{
+    display: block;
+}
+
+@media (max-width: 480px){
+    .mobile-menu-icon{
+        display: block;
+    }
+
+    .left-side{
+        height: calc(100vh - 30px);
+        backdrop-filter: blur(150px);
+        border-radius: 30px;
+        transition: transform 0.3s cubic-bezier(0, 1.05, 0.55, 1.1);
+        position: fixed;
+        z-index: 10;
+        max-width: 350px;
+    }
+
+    .user-data-container{
+        height: calc(80vh - 50px);
+    }
+
+    .container{
+        display: block;
+    }
+
+    .right-side {
+        width: 100%;
+        height: calc(90vh - 50px);
+        
+    }
+
+    .left-side {
+        display: block;
+        width: 100%;
+    }
+
+    .top-side{
+        display: block;
+    }
+
+    .tracking-text{
+        display: none;
+    }
+
+    .payroll-icon{
+        margin-left: 130px;
+        margin-top: 12px;
+    }
+
+    .navbar{
+        gap: 30px;
+    }
+
+    .logout-icon{
+        margin-top: 12px;
+    }
+
+}
+
