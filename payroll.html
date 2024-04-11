@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="assets/responsive.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
 </head>
 <body>
     <div class="mobile-menu-icon" onclick="toggleMenu()">
@@ -160,7 +164,7 @@
             </div>
             <div class="right-side">
                 <div class="name-container">
-                    <h1>Payroll</h1>
+                    <h1>Maverick</h1>
                 </div>
                 <div class="filter-date-container">
                     <div class="from-container">
@@ -200,95 +204,51 @@
                         </select>
                     </div>
                     <div class="buttons-container">
-                        <button>Search</button>
+                        <button class="search-button">Search</button>
                     </div>
                 </div>
-                <div class="salary-details">
-                    <p>Employee Name: Maverick</p>
-                    <p>Monthly Salary: ₹50,000</p>
-                    <p>Leave: 4 Days</p>
-                    <p>Total Working Hours: 313 Hours, 46 Minutes</p>
-                    <p>Per Hour Salary: ₹1,850</p>
-                    <p>Per Minute Salary: ₹1.1</p>
-                    <p>Salary: ₹6,00,000</p>
-                </div>
-                <div class="payroll-table-container">
-                    <table>
-                        <tr>
-                            <th>Date</th>
-                            <th>Name</th>
-                            <th>Working Status</th>
-                            <th>Working Hours</th>
-                            <th>Day Salary</th>
-                        </tr>
-                        <tr>
-                            <td>13/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1800</td>
-                        </tr>
-                        <tr>
-                            <td>14/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1400</td>
-                        </tr>
-                        <tr>
-                            <td>15/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1500</td>
-                        </tr>
-                        <tr>
-                            <td>16/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1100</td>
-                        </tr>
-                        <tr>
-                            <td>17/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1200</td>
-                        </tr>
-                        <tr>
-                            <td>18/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1900</td>
-                        </tr>
-                        <tr>
-                            <td>19/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1700</td>
-                        </tr>
-                        <tr>
-                            <td>20/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1800</td>
-                        </tr>
-                        <tr>
-                            <td>21/03/2024</td>
-                            <td>Maverick</td>
-                            <td>Nil</td>
-                            <td>81 Hours, 40 Minutes</td>
-                            <td>₹1600</td>
-                        </tr>
+                <div class="table-container">
+                    <table id="payrollTable" class="display responsive nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Working Status</th>
+                                <th>Working Hours</th>
+                                <th>Day Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table body content will be populated dynamically -->
+                        </tbody>
                     </table>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </body>
+
+<script>
+$(document).ready(function() {
+    // Sample data
+    var data = [
+        ["13/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1800"],
+        ["14/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1400"],
+        ["15/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1500"],
+        ["16/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1100"],
+        ["17/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1200"],
+        ["18/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1900"],
+        ["19/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1700"],
+        ["20/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1800"],
+        ["21/03/2024", "Maverick", "Nil", "81 Hours, 40 Minutes", "₹1600"]
+    ];
+
+    // Initialize DataTable with Responsive extension
+    $('#payrollTable').DataTable({
+        data: data, // Inject data into DataTable
+        responsive: true // Enable responsiveness
+    });
+});
+</script>
 <script src="script.js"></script>
 </html>
