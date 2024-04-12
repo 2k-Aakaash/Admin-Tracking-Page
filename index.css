@@ -322,6 +322,10 @@ body{
 .dataTables_length, .dataTables_filter, .dataTables_paginate, .dataTables_info{
     display: none;
 }
+
+.dataTables_paginate{
+    display: block;
+}
 table{
     color: #fff;
 }
@@ -614,9 +618,9 @@ option{
         bottom: -20px;
     }
 
-    .table-container{
+    /* .table-container{
         height: calc(100vh - 390px)
-    }
+    } */
 }
 @media (max-width: 460px) and (min-width: 450px){
     .input-date{
