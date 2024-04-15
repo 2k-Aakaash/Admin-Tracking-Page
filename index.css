@@ -4,7 +4,7 @@
 
 body{
     /* background-color: rgb(185, 75, 141); */
-    background: url(assets/BG\ copy.png) no-repeat center center fixed;
+    background: url("https://ik.imagekit.io/026k2i7ys/BG%20copy.png?updatedAt=1713180613687") no-repeat center center fixed;
     background-size: cover;
     transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);

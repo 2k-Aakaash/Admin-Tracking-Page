@@ -3,7 +3,7 @@
 }
 
 body{
-    background: url(assets/BG2.png) no-repeat center center fixed;
+    background: url("https://ik.imagekit.io/026k2i7ys/BG2.png?updatedAt=1713180613775") no-repeat center center fixed;
     background-size: cover;
     transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
