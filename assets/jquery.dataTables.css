@@ -295,6 +295,8 @@ table.dataTable.no-footer {
 table.dataTable.nowrap th, table.dataTable.nowrap td {
   white-space: nowrap;
 }
+
+
 table.dataTable.compact thead th,
 table.dataTable.compact thead td {
   padding: 4px 17px;

@@ -27,7 +27,7 @@
                 <div class="navbar">
                     <div class="first-header">
                         <h1 class="tracking-text">Tracking</h1>
-                        <a href="payroll.html" target="_blank" class="payroll-icon">
+                        <a href="payroll.html" target="_self" class="payroll-icon">
                         <img src="assets/billing.svg" alt="Payroll">
                         </a>
                         <img src="assets/out.png" alt="Logout" class="logout-icon" title="Logout">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                             <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href=" attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href=" attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                         </a>
                         </div>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -114,7 +114,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -126,7 +126,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -138,7 +138,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="bottom-details">
                             <p class="type">type: Peoples</p>
-                            <a href="attendance.html" target="_blank" rel="noopener noreferrer">
+                            <a href="attendance.html" target="_self" rel="noopener noreferrer">
                                 <img src="assets/right-arrow.png" alt="Click to view Attendance" class="right-arrow-icon" title="Attendance">
                             </a>
                         </div>
@@ -158,9 +158,9 @@
                 </div>
             </div>
             <div class="top-side">
-                <div class="top-container">
-                    <h1>Tracking</h1>
-                </div>
+                <a href="tracking.html" class="top-h1">
+                    <h1 class="top-h1">Tracking</h1>
+                </a>
             </div>
             <div class="right-side">
                 <div class="name-container">
@@ -249,6 +249,19 @@ $(document).ready(function() {
         responsive: true // Enable responsiveness
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to hide the left side
+    function hideLeftSide() {
+        const leftSide = document.querySelector('.left-side');
+        // Add the 'collapsed' class to hide the left side
+        leftSide.classList.add('collapsed');
+    }
+
+    // Hide the left side when the page loads
+    hideLeftSide();
+});
+
 </script>
 <script src="script.js"></script>
 </html>
