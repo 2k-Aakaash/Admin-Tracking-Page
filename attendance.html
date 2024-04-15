@@ -334,16 +334,18 @@ $(document).ready(function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to hide the left side
     function hideLeftSide() {
         const leftSide = document.querySelector('.left-side');
-        // Add the 'collapsed' class to hide the left side
-        leftSide.classList.add('collapsed');
+        if (leftSide) {
+            leftSide.classList.add('collapsed');
+        }
     }
 
-    // Hide the left side when the page loads
-    hideLeftSide();
+    if (window.innerWidth <= 480) {
+        hideLeftSide();
+    }
 });
+
 
 </script>
 <script src="script.js"></script>
